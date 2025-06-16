@@ -1,9 +1,11 @@
+
 //
 //  VictoryListViewModel.swift
 //  TinyVictories
 //
 //  Created by Daniel Puente on 6/12/25.
 //
+
 
 
 import Foundation
@@ -34,14 +36,16 @@ class VictoryListViewModel: ObservableObject {
         victories.insert(newVictory, at: 0)
         store.save(victories)
     }
+
     
     func deleteVictory(at offsets: IndexSet) {
         victories.remove(atOffsets: offsets)
         store.save(victories)
     }
 
+
     var victoriesTodayCount: Int {
         let calendar = Calendar.current
         return victories.filter { calendar.isDateInToday($0.date) }.count
     }
-}
+
