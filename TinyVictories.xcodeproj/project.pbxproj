@@ -16,6 +16,31 @@
 			path = TinyVictories;
 			sourceTree = "<group>";
 		};
+		ED4E32B12DC56E4500F83E17 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED4E32B42DC56E7100F83E17 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED4E32B62DC56E8200F83E17 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED4E32B72DC56E8F00F83E17 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED4E32B92DC56EB900F83E17 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +57,11 @@
 		ED4E329A2DC565AD00F83E17 = {
 			isa = PBXGroup;
 			children = (
+				ED4E32B12DC56E4500F83E17 /* Models */,
+				ED4E32B92DC56EB900F83E17 /* ViewModels */,
+				ED4E32B42DC56E7100F83E17 /* Views */,
+				ED4E32B62DC56E8200F83E17 /* Services */,
+				ED4E32B72DC56E8F00F83E17 /* Resources */,
 				ED4E32A52DC565AE00F83E17 /* TinyVictories */,
 				ED4E32A42DC565AE00F83E17 /* Products */,
 			);
@@ -62,6 +92,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				ED4E32A52DC565AE00F83E17 /* TinyVictories */,
+				ED4E32B12DC56E4500F83E17 /* Models */,
+				ED4E32B42DC56E7100F83E17 /* Views */,
+				ED4E32B62DC56E8200F83E17 /* Services */,
+				ED4E32B72DC56E8F00F83E17 /* Resources */,
+				ED4E32B92DC56EB900F83E17 /* ViewModels */,
 			);
 			name = TinyVictories;
 			packageProductDependencies = (

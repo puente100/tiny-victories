@@ -1,3 +1,13 @@
+
+//
+//  VictoryListViewModel.swift
+//  TinyVictories
+//
+//  Created by Daniel Puente on 6/12/25.
+//
+
+
+
 import Foundation
 import Combine
 
@@ -12,7 +22,6 @@ class VictoryListViewModel: ObservableObject {
         load()
     }
 
-    /// Load victories from local store
     func load() {
         store.load()
             .receive(on: DispatchQueue.main)
@@ -22,16 +31,21 @@ class VictoryListViewModel: ObservableObject {
             .store(in: &cancellables)
     }
 
-    /// Add a new victory and update local store
     func addVictory(title: String, description: String? = nil) {
         let newVictory = Victory(title: title, description: description)
         victories.insert(newVictory, at: 0)
         store.save(victories)
     }
 
-    /// Get count of victories from today
+    
+    func deleteVictory(at offsets: IndexSet) {
+        victories.remove(atOffsets: offsets)
+        store.save(victories)
+    }
+
+
     var victoriesTodayCount: Int {
         let calendar = Calendar.current
         return victories.filter { calendar.isDateInToday($0.date) }.count
     }
-}
+
