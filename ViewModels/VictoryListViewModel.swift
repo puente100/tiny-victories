@@ -7,7 +7,6 @@
 //
 
 
-
 import Foundation
 import Combine
 
@@ -16,11 +15,13 @@ class VictoryListViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     private let store: VictoryStore
-
+    
     init(store: VictoryStore = .shared) {
         self.store = store
         load()
     }
+    
+    
 
     func load() {
         store.load()
@@ -30,22 +31,29 @@ class VictoryListViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    
 
     func addVictory(title: String, description: String? = nil) {
         let newVictory = Victory(title: title, description: description)
         victories.insert(newVictory, at: 0)
         store.save(victories)
     }
+    
 
     
     func deleteVictory(at offsets: IndexSet) {
         victories.remove(atOffsets: offsets)
         store.save(victories)
     }
+    
+    
 
 
     var victoriesTodayCount: Int {
         let calendar = Calendar.current
         return victories.filter { calendar.isDateInToday($0.date) }.count
     }
+    
+}
 

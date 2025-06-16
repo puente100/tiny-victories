@@ -1,11 +1,11 @@
-
+//
 //  HomeView.swift
 //  TinyVictories
+//
 //  Created by Daniel Puente on 5/2/25.
 //
 
 import SwiftUI
-
 
 struct HomeView: View {
     @StateObject private var viewModel = VictoryListViewModel()

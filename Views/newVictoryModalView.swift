@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct NewVictoryModalView: View {
     @State private var newVictoryTitle = ""
     @State private var newVictoryDescription = ""
@@ -44,7 +43,7 @@ struct NewVictoryModalView: View {
 }
 
 #Preview {
+
     NewVictoryModalView { _, _ in }
   }
-
 
